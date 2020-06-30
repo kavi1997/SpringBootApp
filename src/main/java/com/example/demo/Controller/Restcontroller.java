@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import com.example.demo.Dao.Repo;
 import com.example.demo.model.Book;
 
@@ -23,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Controller
+@CrossOrigin(origins="http://18.219.101.207:8080/")
 public class Restcontroller {
 	
 	@Autowired
