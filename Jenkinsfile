@@ -22,4 +22,15 @@ pipeline {
      }
 
 }
+    
+    post { 
+         success { 
+            echo 'notified to slack '
+            slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#springbootapp', color: '#00FF00', message: 'Application Deployed Successfully', teamDomain: 'Demo', tokenCredentialId: 'Slack' 
+            }
+         failure {
+            echo 'notified to slack'
+            slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#springbootapp', color: '#FF0000', message: 'Application Deployed Fail', teamDomain: 'Demo', tokenCredentialId: 'Slack'            
+                 }
+    }
 }
