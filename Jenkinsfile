@@ -19,6 +19,6 @@ pipeline {
                     sh 'curl -v -u ${username}:${password} -T target/SpringBootApp-0.0.1-SNAPSHOT.war ${tomcat_url}/manager/text/deploy?path=/SpringBootApp'
                 }
             }    
- 
+     }
 
 }
